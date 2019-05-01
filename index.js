@@ -30,7 +30,8 @@ async function main() {
         let result = await producer.send({
             topic,
             messages: [{
-                value: 'Hello KafkaJS user!' + i
+                value: 'Hello KafkaJS user!' + i,
+                key: 'key',
             }, ],
         });
         console.log(result);
