@@ -24,18 +24,17 @@ async function main() {
         }]
     });
 
-    const producer = kafka.producer()
+    const producer = kafka.producer();
     await producer.connect()
-    for (let i = 0; i < 10; i++) {
-        let result = await producer.send({
-            topic,
-            messages: [{
-                value: 'Hello KafkaJS user!' + i,
-                key: 'key',
-            }, ],
-        });
-        console.log(result);
-    }
-    await producer.disconnect();
-    await admin.disconnect()
+
+    let i = 0;
+    setInterval( () => producer.send({
+        topic,
+        messages: [{
+            value: 'Hello KafkaJS user!' + i++,
+        }, ],
+    }), 1000 * 3);
+
+    // await producer.disconnect();
+    await admin.disconnect();
 }
