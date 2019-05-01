@@ -1,0 +1,23 @@
+{
+  "name": "upgraded-octo-computing-machine",
+  "version": "1.0.0",
+  "description": "Play with kafkajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BassemGhoniem/upgraded-octo-computing-machine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BassemGhoniem/upgraded-octo-computing-machine/issues"
+  },
+  "homepage": "https://github.com/BassemGhoniem/upgraded-octo-computing-machine#readme",
+  "dependencies": {
+    "kafkajs": "^1.7.0"
+  }
+}
